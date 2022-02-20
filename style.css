@@ -1,0 +1,146 @@
+:root{
+    --maincolorna:rgba(24, 5, 5, 0.651);
+    --bx:-4px 4px 5px rgba(0,0,0,0.75);
+}
+body{
+    margin:0;
+    padding:0;
+}
+.wrapper
+{
+   min-height: 100vh;
+    background:linear-gradient(to right,rgba(97, 211, 240, 0.699),rgba(255, 0, 212, 0.383));
+    display:flex;/*makes inline*/
+    justify-content: center;
+flex-direction: column;
+/* goes in middle */
+    align-items: center;
+    font-size: 2rem;
+
+
+}
+.mainParent
+{
+    background: rgba(128, 128, 128, 0.322);
+    width:350px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: -4px 4px 5px rgba(0,0,0,0.75);
+    
+}
+/* RESULT SECTION DISPLAY DIV */
+.result
+{
+    border:1px solid rgba(32, 24, 37, 0.637);
+    border-radius: 10px;
+    padding:1rem;
+    box-shadow: var(--bx);
+    display: flex;
+    justify-content: flex-end;
+    /* color:rgb(211, 14, 14); */
+    color:var(--maincolorna);
+}
+.items
+
+{
+    margin-top:1rem;
+    display:grid;/*  yesle grid le colum lai row ma convert garcha*/
+    gap:1rem;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;it makes 4 buttons for a column */
+    grid-template-columns: repeat(4,1fr);/* it creates 25% each column*/
+    grid-template-areas:
+    "clear clean divide multi"
+    "no7 no8 no9 plus"
+    "no4 no5 no6 minus"
+    "no1 no2 no3 ans"
+    "dot no0 no0 ans"
+
+    ;
+}
+.items > button{
+    cursor: pointer;
+    min-height: 70px;
+    box-shadow: -4px 4px 5px rgba(0,0,0,0.25);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color:var(--maincolorna);
+    background: rgba(37, 132, 195, 0.109);
+    border-radius: 3px;
+    border:none;
+    
+}
+.items >button:hover{
+    background: turquoise !important;
+}
+.clear{
+    grid-area:clear;
+}
+.clean{
+    grid-area:clean;
+}
+.divide{
+    grid-area:divide;
+}
+.multi{
+    grid-area:multi;
+}
+.plus{
+    grid-area:plus;
+}
+.minus{
+    grid-area:minus;
+}
+.no-7{
+    grid-area:no7;
+}
+.no-8{
+    grid-area:no8;
+}
+.no-9{
+    grid-area:no9;
+}
+.no-4{
+    grid-area:no4;
+}
+.no-5{
+    grid-area:no5;
+}
+.no-6{
+    grid-area:no6;
+}
+.no-1{
+    grid-area:no1;
+}
+.no-2{
+    grid-area:no2;
+}
+.no-3{
+    grid-area:no3;
+}
+.no-0{
+    grid-area:no0;
+    background: rgba(56, 233, 115, 0.787) !important;
+}
+.dot{
+    grid-area:dot;
+}
+.ans{
+    grid-area:ans;
+    background:rgba(0, 60, 255, 0.356) !important;
+}
+/* prank animation */
+.prank{
+    animation: shake 0.3s ease-in;
+
+}
+@keyframes shake{
+    0%{
+        transform: translateX(10px);
+    }
+    50%{transform: translateX(-10px);
+
+    }
+    75%{
+        transform:translatex(100px;)
+    }
+}
